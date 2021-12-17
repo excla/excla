@@ -1,0 +1,13 @@
+{
+    "name": "excla/excla",
+    "description": "Micro framework, based on the logic of Nodejs callbacks to facilitate Nodejs developers to be comfortable developing in php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Don de Dieu Bolenge",
+            "email": "dondedieubolenge@gmail.com"
+        }
+    ],
+    "require": {}
+}
