@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         verbose="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="true"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="my test">
+            <!-- <exclude>tests/Utils/Version8/ContainerTest.php</exclude> -->
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <!-- <ini name="error_reporting" value="-1" />-->
+        <ini name="xdebug.mode" value="coverage" />
+        <env name="XDEBUG_MODE" value="coverage" />
+        <ini name="display_errors" value="On" />
+        <ini name="display_startup_errors" value="On" />
+    </php>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
+
+    <logging>
+        <log type="coverage-html" target="reports/coverage"/>
+        <log type="coverage-clover" target="reports/clover.xml"/>
+    </logging>
+</phpunit>
